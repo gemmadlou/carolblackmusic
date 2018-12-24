@@ -1,0 +1,56 @@
+a,
+button {
+  &:hover {
+    transition: background-color .3s ease-in-out;
+  }
+}
+
+.page {
+  display: block;
+  margin: 0 auto;
+  max-width: 118rem;
+  width: 100%;
+
+  &--medium {
+    max-width: 114rem;
+  }
+
+  &--small {
+    max-width: 100rem;
+  }
+}
+
+img {
+  display: block;
+}
+
+input {
+  outline: none;
+  box-shadow: none;
+}
+
+*:focus {
+  outline: none;
+}
+
+::placeholder {
+  color: inherit;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-weight: 400;
+  height: 100%;
+  line-height: 1.3rem;
+}
+
+#__nuxt {
+  height: 100%;
+}
+
+#__layout {
+  height: 100%;
+}
