@@ -19,6 +19,7 @@
 
 @include preonize("", position, $position, $breakpoints);
 @include preonize("", overflow, $overflow, $breakpoints);
+@include preonize("", cursor, $cursor, $breakpoints);
 
 @include preonize("h", height, map-collect($scaled, $viewporth, $percentaged, $discrete), $breakpoints);
 @include preonize("w", width, map-collect($scaled, $percentaged, $discrete), $breakpoints);
@@ -62,6 +63,7 @@
 @include preonize("lh", line-height, $line-height, $breakpoints);
 
 @include preonize("font", font-family, $family, $breakpoints);
+@include preonize("font", font-style, $fontstyle, $breakpoints);
 
 
 @include preonize("d", display, $display, $breakpoints);

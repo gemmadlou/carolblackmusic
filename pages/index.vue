@@ -11,12 +11,12 @@
         <p class="tl fs2 ls2 mb1 white o-60">Website relaunch</p>
         <h3 class="fs2 lh3 white mb2 ls1 o-90">
           Coaching and practical advice for the
-          professional singer and entertainers.
+          professional singer and entertainer.
         </h3>
-        <a
-          href="/get-started"
-          class="fwb fs2 pa1 pl3 pr3 dib align-center bdr6 bs-solid bwa1 bc-white tl white ls2"
-        >get updates</a>
+        <span
+          v-on:click="$store.commit('showBanner')"
+          class="pointer fwl fs2 pa1 pl3 pr3 dib align-center bdr6 bs-solid bwa1 bc-white tl white ls2"
+        >get updates</span>
       </div>
     </section>
   </div>
