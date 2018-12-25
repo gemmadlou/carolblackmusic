@@ -10,7 +10,7 @@
 
     <div
       class="dn db-m w-30-m fixed r0 t0 h-100 bg-blue"
-      style="background-position: center center; background-size: cover; background-image: url(images/carolblack.jpg)"
+      style="background-position: center center; background-size: cover; background-image: url(/images/carolblack.jpg)"
     >
       <span class="absolute bg-blue w-100 b0 l0 t0 o-60"></span>
       <!-- -->
