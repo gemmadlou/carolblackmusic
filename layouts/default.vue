@@ -15,6 +15,7 @@
         </span>
         <a
           href="https://www.facebook.com/Carol-Black-Music-161874570534993/"
+          rel="noopener"
           target="_blank"
           class="white o-80"
         >facebook</a>
@@ -34,6 +35,7 @@
         </p>
         <div class="bg-blue pa1 pl2 pr2 db bdr6 bwa1 bc-white bs-solid mb1">
           <input
+            v-model="email"
             class="bg-transparent bwa0 db w-100 fs2 white"
             type="text"
             placeholder="Enter email"
@@ -41,7 +43,7 @@
         </div>
         <a
           v-on:click="join"
-          class="fs2 pa1 pl3 pr3 lh3 db align-center bdr6 bg-white blue ls1 mb2"
+          class="pointer fs2 pa1 pl3 pr3 lh3 db align-center bdr6 bg-white blue ls1 mb2"
         >Join</a>
 
         <p
@@ -64,6 +66,7 @@
           <a
             class="grey"
             href="https://www.facebook.com/Carol-Black-Music-161874570534993/"
+            rel="noopener"
           >Facebook</a>
           and introduce yourself.
         </p>
@@ -78,7 +81,8 @@ export default {
     return {
       thankyou: false,
       errors: [],
-      submitting: false
+      submitting: false,
+      email: ''
     }
   },
   computed: {
@@ -95,14 +99,19 @@ export default {
       this.submitting = true
 
       try {
-        // const ip = await this.$axios.$get('http://icanhazip.com')
-
+        await this.$axios.$post(
+          'https://vky0aszbp6.execute-api.eu-west-1.amazonaws.com/production/form/cbm/registration',
+          {
+            email: this.email
+          }
+        )
         this.$store.commit('hideBanner')
         this.thankyou = true
       } catch (error) {
         this.errors = error.response
       }
 
+      this.email = ''
       this.submitting = false
     }
   }

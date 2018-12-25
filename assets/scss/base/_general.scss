@@ -18,6 +18,10 @@ button {
   &--small {
     max-width: 100rem;
   }
+
+  &--left {
+    margin-left: 0;
+  }
 }
 
 img {

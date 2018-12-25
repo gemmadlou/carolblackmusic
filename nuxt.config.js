@@ -8,6 +8,9 @@ module.exports = {
    ** Headers of the page
    */
   head: {
+    htmlAttrs: {
+      lang: 'zh-Hant',
+    },
     title: "Carol Black Music: Website Relaunched",
     meta: [{
         charset: 'utf-8'
@@ -61,7 +64,8 @@ module.exports = {
       [
         '@/assets/**/*.scss',
       ]
-    ]
+    ],
+    ['@nuxtjs/google-tag-manager', { id: 'GTM-NMX64TH' }],
   ],
   /*
    ** Axios module configuration

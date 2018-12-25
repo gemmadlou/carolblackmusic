@@ -21,9 +21,3 @@
     </section>
   </div>
 </template>
-
-<style lang="scss">
-li {
-  @extend .mb1;
-}
-</style>
