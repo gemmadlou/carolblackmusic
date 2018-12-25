@@ -47,7 +47,7 @@
         >Join</a>
 
         <p
-          class="fs1 lh1 mb3 o-60 font-oblique lh2"
+          class="fs1 lh1 mb3 o-60 lh2"
         >Your privacy is important to us. We do not share your data with third parties.</p>
       </div>
     </div>

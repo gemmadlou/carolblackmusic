@@ -1,7 +1,9 @@
 <template>
   <div class="font-roboto bg-ice df flex-column blue minh-100">
     <div class="w-70-l">
-      <h2 class="fs3 fwb blue ls2 pa3 page">carolblackmusic</h2>
+      <nuxt-link to="/">
+        <h2 class="fs3 fwb blue ls2 pa3 page">carolblackmusic</h2>
+      </nuxt-link>
     </div>
 
     <div class="w-70-m">

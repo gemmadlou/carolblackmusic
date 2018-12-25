@@ -46,7 +46,8 @@ $line-height: (1: $baseline * 1,
 11: $baseline * 6,
 12: $baseline * 6.5);
 
-$family: ('-roboto': #{'Roboto', serif});
+$family: ('-roboto': #{'Roboto', serif},
+'-davidlibre': #{'David Libre', serif});
 
 $fontstyle: ('-oblique': oblique,
 '-normal': normal);

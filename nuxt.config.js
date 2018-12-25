@@ -27,7 +27,7 @@ module.exports = {
     ],
     link: [{
       rel: 'stylesheet',
-      href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,700,900'
+      href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,700,900|David+Libre'
     }]
   },
 
@@ -62,10 +62,12 @@ module.exports = {
     [
       'nuxt-sass-resources-loader',
       [
-        '@/assets/**/*.scss',
+        '@/assets/scss/style.scss',
       ]
     ],
-    ['@nuxtjs/google-tag-manager', { id: 'GTM-NMX64TH' }],
+    ['@nuxtjs/google-tag-manager', {
+      id: 'GTM-NMX64TH'
+    }],
   ],
   /*
    ** Axios module configuration

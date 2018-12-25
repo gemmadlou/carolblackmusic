@@ -3,7 +3,7 @@
     <span class="dt w-100 h6-m"></span>
     <span class="tu grey fs1 ls2 mb2 dib">Latest</span>
     <h1
-      class="fs5 fs7-ns fs9-m lh5 lh7-ns lh10-m fwl grey-dark mb2 maxw-90-m"
+      class="font-davidlibre fs5 fs7-ns fs9-m lh5 lh7-ns lh10-m fwl grey-dark mb2 maxw-90-m"
     >Because great fashion do never follow trends</h1>
     <div class="grey fs1 oblique mb3">December 25, 2018</div>
     <span class="w6 h-thin bg-grey dt mt3 mb3"></span>
