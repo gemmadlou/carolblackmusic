@@ -50,7 +50,7 @@ module.exports = {
    */
   plugins: [
     '@/assets/scss/style.scss',
-    '~/plugins/youtube.js'
+    '@/plugins/youtube.js'
   ],
 
   /*

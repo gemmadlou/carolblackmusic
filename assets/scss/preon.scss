@@ -33,7 +33,7 @@
 @include preonize("l", left, map-collect($scaled, $negativescaled, $percentaged, $discrete), $breakpoints);
 @include preonize("r", right, map-collect($scaled, $negativescaled, $percentaged, $discrete), $breakpoints);
 
-@include preonize("pa", padding, $scaled, $breakpoints);
+@include preonize("pa", padding, map-collect($scaled, $discrete), $breakpoints);
 @include preonize("pl", padding-left, map-collect($scaled, $discrete), $breakpoints);
 @include preonize("pr", padding-right, map-collect($scaled, $discrete), $breakpoints);
 @include preonize("pt", padding-top, map-collect($scaled, $discrete), $breakpoints);
