@@ -61,9 +61,10 @@
       ></span>
       <div class="maxh-100 auto relative pa3 bg-blue white maxw-xxxbig">
         <h3 class="fs5 ls1 lh4 mb3 fwl">Join for updates</h3>
-        <p
-          class="lh3 mb3 o-90 fwl"
-        >Receive articles about being a professional singer and performer.</p>
+        <p class="lh3 mb3 o-90 fwl">
+          Articles, services and more content will be added.
+          To stay updated, leave us with your email below.
+        </p>
         <div class="bg-blue pa1 pl2 pr2 db bdr6 bwa1 bc-white bs-solid mb1">
           <input
             v-model="email"
