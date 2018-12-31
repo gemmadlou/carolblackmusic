@@ -1,0 +1,61 @@
+.c-navigation {
+  @extend .pt3;
+  @extend .pb3;
+  position: fixed;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  visibility: hidden;
+  z-index: 1;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  &--open {
+    visibility: visible;
+  }
+
+  &:before {
+    @extend .bg-marina;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    @media #{map-get($breakpoints, 'ns')} {
+      opacity: 0.95;
+    }
+
+    @media #{map-get($breakpoints, 'm')} {
+      opacity: 0.8;
+    }
+  }
+
+  &__inner {
+    @extend .page;
+    @extend .relative;
+  }
+
+  &__item {
+    @extend .fs4;
+    @extend .lh3;
+    @extend .db;
+    @extend .w-100;
+    @extend .align-center;
+  }
+
+  &__link {
+    @extend .pointer;
+    @extend .font-davidlibre;
+    @extend .db;
+    @extend .pa1;
+    @extend .pl3;
+    @extend .pr3;
+    @extend .white;
+  }
+}
