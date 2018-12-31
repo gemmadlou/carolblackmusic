@@ -2,7 +2,7 @@ const pkg = require('./package')
 const postcssSVG = require('postcss-svg')
 
 module.exports = {
-  mode: 'spa',
+  mode: 'universal',
 
   /*
    ** Headers of the page
