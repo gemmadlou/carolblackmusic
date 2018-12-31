@@ -9,10 +9,11 @@ module.exports = {
    */
   head: {
     htmlAttrs: {
-      lang: 'zh-Hant',
+      lang: 'zh-Hant'
     },
-    title: "Carol Black Music: Website Relaunched",
-    meta: [{
+    title: 'Carol Black Music',
+    meta: [
+      {
         charset: 'utf-8'
       },
       {
@@ -22,13 +23,16 @@ module.exports = {
       {
         hid: 'description',
         name: 'description',
-        content: pkg.description
+        content: 'Professional singer, songwriter, performer and vocal coach'
       }
     ],
-    link: [{
-      rel: 'stylesheet',
-      href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,700,900|David+Libre'
-    }]
+    link: [
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css?family=Roboto:300,400,700,900|David+Libre'
+      }
+    ]
   },
 
   /*
@@ -41,17 +45,12 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: [
-
-  ],
+  css: [],
 
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [
-    '@/assets/scss/style.scss',
-    '~/plugins/youtube.js'
-  ],
+  plugins: ['@/assets/scss/style.scss', '~/plugins/youtube.js'],
 
   /*
    ** Nuxt.js modules
@@ -59,15 +58,13 @@ module.exports = {
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios',
+    ['nuxt-sass-resources-loader', ['@/assets/scss/style.scss']],
     [
-      'nuxt-sass-resources-loader',
-      [
-        '@/assets/scss/style.scss',
-      ]
-    ],
-    ['@nuxtjs/google-tag-manager', {
-      id: 'GTM-NMX64TH'
-    }],
+      '@nuxtjs/google-tag-manager',
+      {
+        id: 'GTM-NMX64TH'
+      }
+    ]
   ],
   /*
    ** Axios module configuration
@@ -83,9 +80,7 @@ module.exports = {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {
-
-    },
+    extend(config, ctx) {},
     extractCSS: {
       allChunks: true
     },

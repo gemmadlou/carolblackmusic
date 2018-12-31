@@ -36,6 +36,15 @@
     }
   }
 
+  &--dark {
+    &:before {
+      @extend .bg-grey-dark;
+      @media #{map-get($breakpoints, 'm')} {
+        opacity: 0.95;
+      }
+    }
+  }
+
   &__inner {
     @extend .page;
     @extend .relative;

@@ -30,7 +30,7 @@
     <span class="dt h-thin bg-grey-dark w-100 w6-ns o-60 mt3 mb3"></span>
     <div class="s-article">
       <p>
-        It's 2019, and while MySpace still exists, there are so many other platforms to try to
+        It's almost 2019, and while MySpace still exists, there are so many other platforms to try to
         promote yourself and your music. You're probably on one of the following:
       </p>
       <ul>
@@ -214,6 +214,14 @@
 
 <script>
 export default {
-  layout: 'article'
+  layout: 'article',
+
+  head: {
+    titleTemplate:
+      'One way to get started with a singing career in 2019: Theme nights - %s',
+    meta: [
+      { hid: 'description', name: 'description', content: 'Meta description' }
+    ]
+  }
 }
 </script>

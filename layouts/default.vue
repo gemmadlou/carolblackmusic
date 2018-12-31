@@ -8,7 +8,7 @@
     </span>
     <span class="fixed bg-blue w-100 b0 l0 t0 o-60"></span>
 
-    <section class="fixed w-100 z10 relative">
+    <section class="fixed w-100 z10">
       <div class="page df items-center justify-between pl3">
         <h1 class="fs3 fwb white dib ls2 lh3">carolblackmusic</h1>
 
