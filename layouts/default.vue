@@ -1,5 +1,5 @@
 <template>
-  <div class="font-roboto df flex-column justify-between minh-100">
+  <div class="font-roboto df flex-column justify-between h-100">
     <span class="fixed t0 l0 w-100 h-100">
       <span
         class="absolute t0 l0 w-120 h-120 w-100-ns h-100-ns"
@@ -25,14 +25,16 @@
     <span class="dt w-100 h8"></span>
 
     <nav v-bind:class="['c-navigation', navigation ? 'c-navigation--open' : '']">
-      <ul class="c-navigation__inner">
-        <li class="c-navigation__item">
-          <nuxt-link class="c-navigation__link" v-on:click.native="goto" to="/">home</nuxt-link>
-        </li>
-        <li class="c-navigation__item">
-          <nuxt-link class="c-navigation__link" v-on:click.native="goto" to="/articles">articles</nuxt-link>
-        </li>
-      </ul>
+      <div class="c-navigation__inner">
+        <ul class="c-navigation__links">
+          <li class="c-navigation__item">
+            <nuxt-link class="c-navigation__link" v-on:click.native="goto" to="/">home</nuxt-link>
+          </li>
+          <li class="c-navigation__item">
+            <nuxt-link class="c-navigation__link" v-on:click.native="goto" to="/articles">articles</nuxt-link>
+          </li>
+        </ul>
+      </div>
     </nav>
 
     <nuxt/>
