@@ -15,10 +15,10 @@
         <td class="pt1 pb1 df-ns justify-between-ns items-center-ns">
           <div class="lh3 mb2 mb0-ns font-davidlibre">{{ article.headline }}</div>
           <div>
-            <a
-              v-bind:href="`/admin/article/${article.id}`"
+            <nuxt-link
+              v-bind:to="`/admin/article/edit/${article.id}`"
               class="pointer fs1 pa-xsmall pl3 pr3 dib align-center bdr6 bs-solid bwa1 lh2 bc-blue bg-ice tl blue ls2"
-            >Edit</a>
+            >Edit</nuxt-link>
           </div>
         </td>
       </tr>
@@ -28,13 +28,14 @@
 
 <script>
 import { VueEditor } from 'vue2-editor'
+import axios from 'axios'
 
 export default {
   components: {
     VueEditor
   },
 
-  layout: 'article',
+  layout: 'admin',
 
   data() {
     return {
@@ -48,8 +49,18 @@ export default {
           id: 'xxxxxxxx',
           headline: 'Pros and cons of a theme night'
         }
-      ],
-      content: ''
+      ]
+    }
+  },
+
+  async asyncData() {
+    let response = await axios.get('http://localhost:5000/content/cbm-article')
+
+    return {
+      articles: response.data.Items.map(item => ({
+        id: item.slug,
+        headline: item.content.headline
+      }))
     }
   }
 }

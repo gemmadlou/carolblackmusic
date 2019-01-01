@@ -43,6 +43,12 @@ module.exports = {
    */
   css: [],
 
+  // 'https://vky0aszbp6.execute-api.eu-west-1.amazonaws.com/production/content'
+
+  env: {
+    baseUrl: process.env.BASE_URL || 'http://localhost:5000'
+  },
+
   /*
    ** Plugins to load before mounting the App
    */
