@@ -21,6 +21,8 @@
 @include preonize("", overflow, $overflow, $breakpoints);
 @include preonize("", cursor, $cursor, $breakpoints);
 
+@include preonize("z", z-index, $numbers, $breakpoints);
+
 @include preonize("h", height, map-collect($scaled, $viewporth, $percentaged, $discrete), $breakpoints);
 @include preonize("w", width, map-collect($scaled, $percentaged, $discrete), $breakpoints);
 @include preonize("maxw", max-width, map-collect($discrete, $special-sizes, $percentaged), $breakpoints);

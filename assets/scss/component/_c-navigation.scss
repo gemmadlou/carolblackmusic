@@ -1,0 +1,76 @@
+.c-navigation {
+  @extend .pt3;
+  @extend .pb3;
+  position: fixed;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  visibility: hidden;
+  z-index: 1;
+
+  &--open {
+    visibility: visible;
+  }
+
+  &:before {
+    @extend .bg-marina;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    @media #{map-get($breakpoints, 'ns')} {
+      opacity: 0.95;
+    }
+
+    @media #{map-get($breakpoints, 'm')} {
+      opacity: 0.8;
+    }
+  }
+
+  &--dark {
+    &:before {
+      @extend .bg-grey-dark;
+      @media #{map-get($breakpoints, 'm')} {
+        opacity: 0.95;
+      }
+    }
+  }
+
+  &__inner {
+    @extend .page;
+    @extend .relative;
+    @extend .h-100;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__links {
+    @extend .relative;
+  }
+
+  &__item {
+    @extend .fs4;
+    @extend .lh3;
+    @extend .db;
+    @extend .w-100;
+    @extend .align-center;
+  }
+
+  &__link {
+    @extend .pointer;
+    @extend .font-davidlibre;
+    @extend .db;
+    @extend .pa1;
+    @extend .pl3;
+    @extend .pr3;
+    @extend .white;
+  }
+}
