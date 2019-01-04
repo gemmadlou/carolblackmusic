@@ -211,6 +211,8 @@ export default {
   },
 
   head: {
+    title:
+      'One way to get started with a singing career in 2019: Theme nights - CarolBlackMusic',
     meta: [
       {
         hid: 'description',
