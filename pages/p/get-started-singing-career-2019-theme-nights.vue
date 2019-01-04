@@ -237,7 +237,9 @@ export default {
       {
         hid: 'og:image',
         content: `${
-          typeof window !== 'undefined' ? window.location.href : ''
+          typeof window !== 'undefined'
+            ? window.location.href
+            : process.env.SITE_URL
         }/images/articles/00001/microphone.jpg`
       }
     ]
