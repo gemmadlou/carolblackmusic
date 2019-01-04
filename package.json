@@ -17,6 +17,7 @@
     "@nuxtjs/pwa": "^2.6.0",
     "amazon-cognito-identity-js": "^3.0.6",
     "cross-env": "^5.2.0",
+    "debounce": "^1.2.0",
     "nuxt": "^2.0.0",
     "nuxt-sass-resources-loader": "^2.0.5",
     "postcss-encode-background-svgs": "^1.0.3",

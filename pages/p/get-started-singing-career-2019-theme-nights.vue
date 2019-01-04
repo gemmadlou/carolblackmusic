@@ -1,5 +1,5 @@
 <template>
-  <div id="page" class="relative hidden page page--small pa3">
+  <div id="page" ref="page" class="relative hidden page page--small pa3">
     <span class="dt w-100 h6-m"></span>
     <span class="tu grey fs1 ls2 mb2 dib">Latest</span>
     <h1
@@ -213,8 +213,16 @@
 
 
 <script>
+import { debounce } from 'debounce'
+
 export default {
   layout: 'article',
+
+  data() {
+    return {
+      scrollRecorded: []
+    }
+  },
 
   head: {
     titleTemplate:
@@ -222,6 +230,55 @@ export default {
     meta: [
       { hid: 'description', name: 'description', content: 'Meta description' }
     ]
+  },
+
+  methods: {
+    handleScroll() {
+      if (typeof window === 'undefined') {
+        return
+      }
+      let top = this.$refs.page.offsetTop
+      let bottom = this.$refs.page.offsetHeight
+      let scroll = window.scrollY + window.innerHeight
+      let pos = {
+        top,
+        bottom,
+        scroll,
+        scrolled: scroll > top ? (scroll - top) / bottom : null
+      }
+
+      let trackables = [25, 50, 75, 90, 100]
+
+      trackables.forEach(trackable => {
+        if (
+          pos.scrolled * 100 > trackable &&
+          !this.scrollRecorded.includes(trackable)
+        ) {
+          this.submitDataLayer(trackable)
+          this.scrollRecorded.push(trackable)
+        }
+      })
+    },
+
+    submitDataLayer(percentageReached) {
+      window.dataLayer = window.dataLayer || []
+      dataLayer.push({
+        event: 'ContentConsumed',
+        percentage: percentageReached,
+        timestamp: new Date().getTime()
+      })
+    }
+  },
+
+  created: function() {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', debounce(this.handleScroll))
+    }
+  },
+  destroyed: function() {
+    if (typeof window !== 'undefined') {
+      window.removeEventListener('scroll', debounce(this.handleScroll))
+    }
   }
 }
 </script>

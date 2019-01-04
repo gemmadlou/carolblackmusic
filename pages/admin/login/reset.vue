@@ -133,7 +133,6 @@ export default {
           },
 
           newPasswordRequired: function(userAttributes, requiredAttributes) {
-            alert('new pass')
             console.log(userAttributes)
             delete userAttributes.email_verified
 
