@@ -3,60 +3,37 @@
     <span class="dt w-100 h6-m"></span>
     <span class="tu grey fs1 ls2 mb2 dib">Latest</span>
     <h1
-      class="font-davidlibre fs5 fs7-ns fs9-m lh5 lh7-ns lh10-m fwl grey-dark mb2 maxw-90-m"
+      class="font-davidlibre fs5 fs7-ns fs9-m lh5 lh7-ns lh10-m fwl grey-dark mb2"
     >One way to get started with a singing career in 2019: Theme nights</h1>
     <div class="grey fs1 oblique mb3">December 25, 2018</div>
     <span class="w6 h-thin bg-grey dt mt3 mb3"></span>
-    <h2 class="grey-dark o-90 lh3 mb3 maxw-80-ns maxw-80-l">
-      With so many digital platforms for music, a theme night isn't the most
-      attractive option for launching a singing career. But here's why you should
-      consider it.
+    <h2 class="grey-dark fs3-m lh3 lh4-m mb3 maxw-80-ns maxw-two-thirds-l">
+      With so many digital platforms to kickstart a music career,
+      why choose a theme night.
     </h2>
-    <div class="df items-center">
-      <div class="maxw-big w-100">
-        <picture class="db u-aspect-ratio u-aspect-ratio--square bdr-50 hidden">
-          <img
-            class="u-aspect-ratio__inner"
-            style="object-fit: cover;"
-            src="https://avatars0.githubusercontent.com/u/4562670?s=460&v=4"
-          >
-        </picture>
-      </div>
-      <div class="grey-dark lh2 fs2 oblique tu ml3">
-        <div class="mb-thin o-60 fwb ls1">By Gemma Black</div>
-        <div class="o-60">Digital Content Manager</div>
-      </div>
-    </div>
+    <img class="w-100 mb3" alt="Image of a microphone" src="/images/articles/00001/microphone.jpg">
     <span class="dt h-thin bg-grey-dark w-100 w6-ns o-60 mt3 mb3"></span>
     <div class="s-article">
       <p>
-        It's almost 2019, and while MySpace still exists, there are so many other platforms to try to
-        promote yourself and your music. You're probably on one of the following:
+        It's almost 2019, and there's a lot of advice on how to start singing professionally.
+        Advice tends to take advantage of new technology:
       </p>
       <ul>
         <li>Youtube</li>
         <li>TikTok</li>
         <li>Bandcamp</li>
-        <li>Soundcloud</li>
-        <li>Twitter</li>
-        <li>Audiomack</li>
-        <li>Facebook</li>
       </ul>
       <p>
-        I'm no expert in any of them and neither is Carol, so feel free to continue or
-        start using those platforms and get advice from those who've made a success of them.
-        Besides, there are probably a dozen more major platforms and hundreds more smaller ones.
-        However, theme nights are a great way to get your voice out to people who aren't behind
-        a screen; people who'll give you instant feedback with how they respond directly to your
-        performance.
+        But is there a human-to-human way, or are careers only made on the internet?
+        If you don't have any original music yet, you can start singing covers and
+        doing theme nights straight away!
       </p>
 
-      <h3>Don't be put off by theme nights</h3>
+      <h3>Don't be put off</h3>
       <p>
-        Theme nights might seem like another way of singing covers, and singing covers
-        don't seem as glamorous as singing your own songs, but
+        At first glance, singing covers or doing a theme night may not seem glamorous, but
         many high-profile singers and entertainers actually sing songs they hadn't written
-        themselves.
+        themselves, and that doesn't stop them.
       </p>
       <p>
         Let's take a look at Diana Ross. Ain't no mountain high enough is a fantastic song. However, it was
@@ -135,15 +112,24 @@
         anything you think an audience would be into. Decades and eras seem popular; like a 90s throwback night or
         swinging 60s. You might just want to do love songs for couples or boy band material if you are part a group.
       </p>
-      <p>Put together two 45-minute sets. That could anything from 9-20 songs per set.</p>
-      <p>
-        Now you don't have to learn all those songs before you start promoting your theme night.
-        You do have to be confident to sing or play all the songs on the setlist well.
-      </p>
-      <p>
-        However, your work has only just begun. Hope this article has inspired you to
-        take practical steps in becoming a professional singer in 2019.
-      </p>
+    </div>
+
+    <span class="dt h-thin bg-grey-dark w-100 w6-ns o-60 mt3 mb3"></span>
+
+    <div class="df items-center">
+      <div class="maxw-big w-100">
+        <picture class="db u-aspect-ratio u-aspect-ratio--square bdr-50 hidden">
+          <img
+            class="u-aspect-ratio__inner"
+            style="object-fit: cover;"
+            src="https://avatars0.githubusercontent.com/u/4562670?s=460&v=4"
+          >
+        </picture>
+      </div>
+      <div class="grey-dark lh2 fs2 oblique tu ml3">
+        <div class="mb-thin o-60 fwb ls1">By Gemma Black</div>
+        <div class="o-60">Digital Content Manager</div>
+      </div>
     </div>
   </div>
 </template>
@@ -225,10 +211,33 @@ export default {
   },
 
   head: {
-    titleTemplate:
-      'One way to get started with a singing career in 2019: Theme nights - %s',
     meta: [
-      { hid: 'description', name: 'description', content: 'Meta description' }
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'One way to get started with a singing career in 2019: Theme nights - CarolBlackMusic'
+      },
+      {
+        hid: 'og:title',
+        content:
+          'One way to get started with a singing career in 2019: Theme nights - CarolBlackMusic'
+      },
+      {
+        hid: 'og:description',
+        content:
+          'With so many digital platforms to kickstart a music career, why choose a theme night.'
+      },
+      {
+        hid: 'og:type',
+        content: 'article'
+      },
+      {
+        hid: 'og:image',
+        content: `${
+          typeof window !== 'undefined' ? window.location.href : ''
+        }/images/articles/00001/microphone.jpg`
+      }
     ]
   },
 
